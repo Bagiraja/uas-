@@ -29,10 +29,10 @@ def bayar(data):
     if metode == "2":
         print('Silakan Scan QRIS')
         input('Sudah Bayar? ENTERR....')
-        bayar = total - total_diskon
+        bayar = total_diskon
         kembalian = 0
     else: 
-        print(f'TOTAL: {format_rupiah(total)}')
+        print(f'TOTAL: {format_rupiah(total_diskon)}')
         bayar = int(input('Bayar: Rp'))
         if bayar < total_diskon:
             print('Uang Kurang!')
@@ -56,7 +56,7 @@ def bayar(data):
     print(f"Total = {format_rupiah(total)}")
     if diskon > 0:
         print(f"Diskon {diskon}% = -{format_rupiah(potongan)}")
-    print(f"Total Akhir = {format_rupiah(total)}")
+    print(f"Total Akhir = {format_rupiah(total_diskon)}")
     print(f"Bayar = {format_rupiah(bayar)}")
     print(f"Kembali = {format_rupiah(kembalian)}")
     print("=" * 50)  
@@ -71,7 +71,7 @@ def tambah_stok(data):
     nomor = int(input('Nomor Menu: '))
     Daftar = list(data['Menu'].keys())
 
-    if nomor < 0 or nomor > len(Daftar):
+    if nomor <= 0 or nomor > len(Daftar):
         print('Menu Tidak Ada!')
         input('ENTER...')
         return

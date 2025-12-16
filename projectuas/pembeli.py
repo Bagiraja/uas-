@@ -12,7 +12,7 @@ def options():
         print('2. Pesan')
         print('3. Hapus Pesanan')
         print('4. Lihat Keranjang')
-        print('5. Bayar')
+       
         
         print('0. Keluar')
         print()
@@ -29,8 +29,6 @@ def options():
         elif pilih == '4':
             lihat_keranjang(data)
             input('ENTERR...')
-        elif pilih == '5':
-            bayar(data)
         elif pilih == "0":
             print("Terima kasih!")
             exit_program()

@@ -1,6 +1,6 @@
 from menu import judul,tampilkan_menu
 
-from pembayaran import data,tambah_stok
+from pembayaran import data,tambah_stok,bayar
 from wexit import welcome_message,exit_program
 
 
@@ -11,6 +11,7 @@ def optionspenjual():
         judul('\t\t   MENU UTAMA PENJUAL')
         print('1. Lihat Menu')
         print('2. Tambah Stok')
+        print('3. Bayar')
         print('0. Keluar')
         print()
 
@@ -21,6 +22,8 @@ def optionspenjual():
             input('ENTERR...')
         elif pilih == '2':
             tambah_stok(data)
+        elif pilih == '3':
+            bayar(data)
         elif pilih == "0":
             print("Terima kasih!")
             exit_program()
