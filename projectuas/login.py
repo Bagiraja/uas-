@@ -11,10 +11,21 @@ datapenjual = {
 
 }
 
-datapembeli = {
-       'user3':'pw1',
-       'user4':'pw2'
-}
+def optionslogin():
+     while True:
+          judul('SELAMAT DATANG DI HOTROD')
+          print('1.Penjual')
+          print('2.Pembeli')
+          Pilih = input('pilih: ')
+
+          if Pilih == "1":
+            login()
+          else:
+            judul('SILAKAN MASUKAN NAMA ANDA')
+            nama = input('Masukan Nama:')
+
+            pembeli_main()
+
 
 def login():
     judul('\t\t       LOGIN')
@@ -24,9 +35,7 @@ def login():
     if username in datapenjual and datapenjual[username] == password:
         print('login kehalaman penjual berhasil')
         penjual_main()
-    elif username in datapembeli and datapembeli[username] == password:
-        print('login kehalaman user berhasil')
-        pembeli_main()
+
     else:
         print('password atau username salah')
 
@@ -38,5 +47,4 @@ def login():
 
 
 if __name__ =='__main__':
-        
-        login()
+        optionslogin()

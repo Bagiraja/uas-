@@ -21,8 +21,8 @@ def exit_program():
     print('1...')
     sleep(1)
     print('terima kasih')
-    from login import login
-    login()
+    from login import optionslogin
+    optionslogin()
 
 
     
